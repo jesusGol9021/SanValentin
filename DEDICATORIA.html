@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Amor ❤️</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            text-align: center;
+            padding: 50px;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        h1 {
+            font-size: 2.8em;
+            color: #ffe6f2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+        p {
+            font-size: 1.7em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        .heart {
+            font-size: 3em;
+            animation: heartbeat 1.5s infinite;
+            color: #ff165d;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .botones {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        button {
+            background-color: #ff165d;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        button:hover {
+            background-color: #d63384;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+        .photo-container, .dedicatoria {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeIn 2s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .photo-container h2, .dedicatoria h2 {
+            color: #ff165d;
+        }
+        .dedicatoria p {
+            color: #ff165d;
+            font-weight: bold;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hola, mi amor ❤️</h1>
+    <p>Quería decirte algo muy especial...</p>
+    <p class="heart">❤️</p>
+    <div class="mensaje">
+        <p>Desde el primer día que te vi, supe que eras alguien especial. Tu sonrisa ilumina mis días, 
+        tu risa es mi canción favorita, y tu amor es el regalo más hermoso que la vida me ha dado. 
+        No hay palabras suficientes para expresar cuánto te amo. Eres mi felicidad, mi todo. 💖</p>
+    </div>
+    <p>¿Quieres ser mi San Valentín? 💕</p>
+    
+    <div class="botones">
+        <button onclick="aceptar()">Sí, quiero! 💖</button>
+        <button onclick="mostrarFoto()">Mostrar nuestra foto favorita 📸</button>
+    </div>
+    
+    <div class="photo-container" id="fotoContainer">
+        <h2>Nuestra foto favorita 📸</h2>
+        <img src="c:\Users\zoaju\Downloads\WhatsApp Image 2025-01-23 at 17.32.09.jpeg" alt="Nuestra foto juntos" style="max-width: 100%; border-radius: 10px;">
+    </div>
+    
+    <div class="dedicatoria" id="dedicatoriaContainer">
+        <h2>💌 Mensaje especial 💌</h2>
+        <p id="dedicatoriaTexto">Eres lo mejor que me ha pasado, cada momento contigo es un regalo. Te amo con todo mi corazón. ❤️</p>
+    </div>
+
+    <script>
+        function aceptar() {
+            alert('¡Te amo más de lo que las palabras pueden expresar! 💖 Cada día contigo es un regalo, y no hay nada que desee más que pasar el resto de mi vida a tu lado. Eres mi todo. 💕');
+            document.querySelector("button").style.display = "none";
+        }
+
+        function mostrarFoto() {
+            document.getElementById('fotoContainer').style.display = "block";
+            document.getElementById('dedicatoriaContainer').style.display = "block";
+        }
+    </script>
+</body>
+</html>
